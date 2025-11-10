@@ -1,0 +1,2 @@
+echo Django==4.2.7 > requirements.txt
+echo djangorestframework==3.14.0 >> requirements.txt
