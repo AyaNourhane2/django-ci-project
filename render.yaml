@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: django-render-app
+    runtime: python
+    plan: free
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn djangoproject_git.wsgi:application --bind 0.0.0.0:8000"
+    envVars:
+      - key: DEBUG
+        value: "False"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: PYTHON_VERSION
+        value: "3.10.0"
